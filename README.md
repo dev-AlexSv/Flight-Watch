@@ -1,3 +1,2 @@
 # Flight-Watch
-An Aviation Delay Risk Engine Backend System
-
+An Aviation Delay Risk Engine REST API service where users log upcoming flight itineraries (Flight Number, Origin, Destination, Departure Time). The system automatically calls a live weather API using the origin/destination IANA/ICAO coordinates, calculates a Flight Delay Risk Score based on atmospheric conditions (wind speed, cloud cover, visibility, precipitation), and persists flight schedules alongside weather snapshot records in MySQL.

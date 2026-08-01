@@ -1,13 +1,13 @@
-package com.alex.digital_nomad_tracker;
+package com.alex.flight_watch;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DigitalNomadTrackerApplication {
+public class FlightWatchApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DigitalNomadTrackerApplication.class, args);
+		SpringApplication.run(FlightWatchApplication.class, args);
 	}
 
 }
