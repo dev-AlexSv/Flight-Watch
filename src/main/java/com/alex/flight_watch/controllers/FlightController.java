@@ -19,5 +19,5 @@ public class FlightController {
 
 
 
-    @PostMapping("api/v1/flights/{id}/assess-risk")
+    @GetMapping("api/v1/flights/{id}/assess-risk")
 }
