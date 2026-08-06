@@ -3,45 +3,28 @@ package com.alex.flight_watch.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class WeatherResponse {
-
-    @JsonProperty("current_weather")
-    private CurrentWeather currentWeather;
+    @JsonProperty("current")
+    private CurrentWeather current;
 
     public WeatherResponse() {}
 
-    public WeatherResponse(CurrentWeather currentWeather) {
-        this.currentWeather = currentWeather;
-    }
+    public CurrentWeather getCurrent() { return current; }
+    public void setCurrent(CurrentWeather current) { this.current = current; }
 
-    public CurrentWeather getCurrentWeather() {
-        return currentWeather;
-    }
-
-    public void setCurrentWeather(CurrentWeather currentWeather) {
-        this.currentWeather = currentWeather;
-    }
-
-    // Inner static class representing the "current_weather" object
     public static class CurrentWeather {
 
+        @JsonProperty("temperature_2m")
         private double temperature;
 
-        @JsonProperty("windspeed")
+        @JsonProperty("wind_speed_10m")
         private double windSpeed;
 
-        @JsonProperty("weathercode")
+        @JsonProperty("weather_code")
         private int weatherCode;
 
         private String time;
 
         public CurrentWeather() {}
-
-        public CurrentWeather(double temperature, double windSpeed, int weatherCode, String time) {
-            this.temperature = temperature;
-            this.windSpeed = windSpeed;
-            this.weatherCode = weatherCode;
-            this.time = time;
-        }
 
         public double getTemperature() { return temperature; }
         public void setTemperature(double temperature) { this.temperature = temperature; }
