@@ -29,7 +29,7 @@ public class WeatherRiskAssessmentService {
         this.riskAssessmentHelper = riskAssessmentHelper;
     }
 
-    @@Transactional
+    @Transactional
     public Flight applyRiskAndPersist(Flight flight, WeatherSnapshot weatherSnapshot) {
         WeatherSnapshot savedWeatherSnapshot = weatherSnapshotRepository.save(weatherSnapshot);
 
