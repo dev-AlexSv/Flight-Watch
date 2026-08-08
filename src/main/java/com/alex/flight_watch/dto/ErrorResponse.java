@@ -3,18 +3,18 @@ package com.alex.flight_watch.dto;
 import java.time.LocalDateTime;
 
 public class ErrorResponse {
-    LocalDateTime localDateTime;
+    LocalDateTime timeStamp;
     int status;
     String error;
     String message;
     String path;
 
-    public LocalDateTime getLocalDateTime() {
-        return localDateTime;
+    public LocalDateTime getTimeStamp() {
+        return timeStamp;
     }
 
-    public void setLocalDateTime(LocalDateTime localDateTime) {
-        this.localDateTime = localDateTime;
+    public void setTimeStamp(LocalDateTime timeStamp) {
+        this.timeStamp = timeStamp;
     }
 
     public int getStatus() {
