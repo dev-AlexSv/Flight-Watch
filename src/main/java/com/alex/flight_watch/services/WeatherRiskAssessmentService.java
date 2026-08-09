@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -59,5 +60,14 @@ public class WeatherRiskAssessmentService {
 
         return applyRiskAndPersist(flight, weatherSnapshot);
     }
+
+    public Optional<Flight> getFlightById(Long flightId) {
+        return flightRepository.findById(flightId);
+    }
+
+    public List<Flight> getAllFlights() {
+        return flightRepository.findAll();
+    }
+
 
 }
