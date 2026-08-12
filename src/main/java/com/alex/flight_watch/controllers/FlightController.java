@@ -30,14 +30,14 @@ public class FlightController {
     }
 
 
-    @GetMapping("")
+    @GetMapping("/api/v1/flights")
     public ResponseEntity<List<Flight>> getFlights() {
         List<Flight> flightsList = weatherRiskAssessmentService.getAllFlights();
 
         return ResponseEntity.ok(flightsList);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/api/v1/flights/{id}")
     public ResponseEntity<Flight> getFlightById(
             @PathVariable Long id
     ) {
@@ -47,7 +47,7 @@ public class FlightController {
     }
 
 
-    @PostMapping("/{id}/assess-risk")
+    @PostMapping("/api/v1/flights/{id}/assess-risk")
     public ResponseEntity<Flight> assessFlightRisk(
             @PathVariable Long id
     ) {
